@@ -14,7 +14,7 @@
       fixed-height="400px"
     >
       <vueper-slide v-for="(image, i) in images" :key="i" :image="image">
-        <img src="(image, i)" alt />
+        <img :src="(image, i)" alt />
       </vueper-slide>
     </vueper-slides>
 
@@ -40,7 +40,7 @@
           :image="image"
           @click.native="$refs.vueperslides2.goToSlide(i)"
         >
-          <img src="(image, i)" alt />
+          <img :src="(image, i)" alt />
         </vueper-slide>
       </vueper-slides>
     </div>

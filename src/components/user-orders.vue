@@ -30,8 +30,8 @@
         <!-- <td>{{ order.seller.name }}</td> -->
         <td v-if="isUserSeller(order.seller._id)">
           <!-- <span v-if="isUserSeller(order.seller._id)">Approve!</span> -->
-          <img class="done" src="../img/done.png" alt="done icon" @click="onApprove(order._id)"/>
-          <img class="cross" src="../img/cross-mark.png" alt="cross mark icon"/>
+          <img class="done" src="../assets/img/done.png" alt="done icon" @click="onApprove(order._id)"/>
+          <img class="cross" src="../assets/img/cross-mark.png" alt="cross mark icon"/>
         </td>
       </tr>
     </table>

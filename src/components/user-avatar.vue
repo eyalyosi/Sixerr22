@@ -9,7 +9,7 @@
       />
 
       <img v-if="loggedinUser" :src="loggedinUser.imgUrl" alt="" />
-      <img v-else src="../img/portrait.png" alt="" />
+      <img v-else src="../assets/img/portrait.png" alt="" />
     </label>
     <!-- <el-avatar :src="loggedInUser.img" class="user-avatar-info">
       {{ defaultProfilePicture }}

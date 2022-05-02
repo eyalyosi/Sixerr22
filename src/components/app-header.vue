@@ -1,9 +1,6 @@
 <template>
-  <header
-    class="app-header full"
-    :class="{ 'change-color': scrollPosition > 50 }"
-  >
-    <button class="hamburger hide">☰</button>
+  <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 }">
+    <button @click="toggleActive" class="hamburger hide">☰</button>
     <main class="main-header" ref="nav">
       <div class="main-layout header-flex">
         <div class="logo-and-search">
@@ -17,68 +14,46 @@
               </div>
             </router-link>
           </h1>
-          <!-- <form
-            class="search-bar-header"
-            :class="{ 'search-header': scrollPosition > 100 }"
-          >
-            <div>
-              <div class="sticky-search">
-                <img src="../assets/logo/magnifying-glass.png" alt />
-                <input
-                  type="text"
-                  placeholder="Find Services"
-                  v-model="filterBy.title"
-                  @change="setFilter"
-                />
-                <button class="search-header-btn">Search</button>
-              </div>
-            </div>
-          </form> -->
-          <gig-filter-header @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 }" class="hide"/>
+
+          <div class="hamburger-nav" v-if="showNav">
+            <ul>
+              <li class="btn-close-nav" @click="toggleActive">X</li>
+              <a @click="toggleSignup" class="join-nav">Join</a>
+              <a @click="toggleLogin">Sign in</a>
+              <router-link to="/explore">
+                <li>Explore</li>
+              </router-link>
+              <router-link to="/order-app">
+                <li>Become a seller</li>
+              </router-link>
+            </ul>
+          </div>
+          <gig-filter-header @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 }" class="hide" />
         </div>
         <nav class="nav">
           <router-link to="/explore" class="explore">
-            <a :class="$route.meta.logoClass" href @click="showAllCategories"
-              >Explore</a
-            >
+            <a :class="$route.meta.logoClass" href @click="showAllCategories">Explore</a>
           </router-link>
-          <router-link :class="$route.meta.logoClass" to="/" class="become-seller"
-            >Become A Seller</router-link
-          >
+          <router-link :class="$route.meta.logoClass" to="/" class="become-seller">Become A Seller</router-link>
           <div v-if="!loggedInUser">
-            <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
-            <a @click="toggleSignup" class="join" :class="$route.meta.bodyClass"
-              >Join</a
-            >
+            <a @click="toggleLogin" class="sign-in" :class="$route.meta.logoClass">Sign in</a>
+            <a @click="toggleSignup" class="join" :class="$route.meta.bodyClass">Join</a>
           </div>
           <div class="login-modal" v-show="showLogin" @click="closeLogin">
-            <login
-              @toggleLogin="toggleLogin"
-              @join="join"
-              @closeLogin="toggleLogin"
-            />
+            <login @toggleLogin="toggleLogin" @join="join" @closeLogin="toggleLogin" />
           </div>
           <div class="signup-modal" v-show="showSignup" @click="closeSignup">
             <signup @toggleSignup="toggleSignup" @closeSignup="toggleSignup" />
           </div>
-          <div
-            v-if="loggedInUser"
-            class="avatar-box"
-            @click.stop="openProfileModal"
-          >
+          <div v-if="loggedInUser" class="avatar-box" @click.stop="openProfileModal">
             <el-avatar :size="40" :src="loggedInUser.imgUrl">{{
-              userLatter
+                userLatter
             }}</el-avatar>
             <div class="online-dot"></div>
           </div>
           <ul class="profile-nav" v-show="showProfileNav">
             <li>
-              <router-link
-                to="/user-profile"
-                class="profile-txt"
-                @click="closeNav"
-                >Profile</router-link
-              >
+              <router-link to="/user-profile" class="profile-txt" @click="closeNav">Profile</router-link>
             </li>
             <li class="line"></li>
             <li class="logout-btn" @click="doLogout">Logout</li>
@@ -101,6 +76,7 @@ export default {
       showLogin: false,
       scrollPosition: null,
       showProfileNav: false,
+      showNav: false,
       filterBy: {
         title: "",
       },
@@ -157,6 +133,9 @@ export default {
     toggleSignup() {
       this.showSignup = !this.showSignup;
     },
+    toggleActive() {
+      this.showNav = !this.showNav
+    },
     updateScroll() {
       if (!this.isHome) {
         return;
@@ -180,7 +159,7 @@ export default {
         return username.charAt(0).toUpperCase();
       }
     },
-    userImg(){
+    userImg() {
       return this.$store.getters.loggedinUser.username.imgUrl
     }
   },
