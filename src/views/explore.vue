@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="explore-items">
     <explore-filter @setFilter="setFilter" />
     <gig-list v-if="gigs" :gigs="gigs" />
      <p v-else class="user-msg-explore">No Gigs maching your search, try clearing filters</p>

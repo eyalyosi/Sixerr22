@@ -21,7 +21,7 @@
             <div>
               <img
                 class="from-img"
-                src="../img/location.png"
+                src="../assets/img/location.png"
                 alt=""
               />
               <span>From</span>

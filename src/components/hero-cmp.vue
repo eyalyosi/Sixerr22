@@ -105,15 +105,15 @@ export default {
   data() {
     return {
       images: [
-        "src/img/hero11.jpg",
-        "src/img/hero12.jpg",
-        "src/img/hero13.jpg",
-        "src/img/hero14.jpg",
-        "src/img/hero15.jpg",
-        "src/img/hero16.jpg",
+        "src/assets/img/hero11.jpg",
+        "src/assets/img/hero12.jpg",
+        "src/assets/img/hero13.jpg",
+        "src/assets/img/hero14.jpg",
+        "src/assets/img/hero15.jpg",
+        "src/assets/img/hero16.jpg",
 
       ],
-      image: "src/img/hero16.jpg",
+      image: "src/assets/img/hero16.jpg",
       sellerNames: [
         "Andrea, Fashion Designer",
         "Suzan, Bar Owner",

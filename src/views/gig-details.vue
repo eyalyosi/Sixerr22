@@ -19,11 +19,62 @@
         </div>
       </div>
       <carusel-details :images="images"></carusel-details>
-      <!-- <div class="reviews">
-        <p>What people loved about this seller</p>
-        <a href>See all reviews</a>
-      </div> -->
-      <!-- <caruser-details-review :user="currUser" v-if="currUser" /> -->
+          <div class="check-out-section-mobile">
+      <div class="check-out-part">
+        <div class="checkout-title">
+          <p class="service">{{ gig.category }}</p>
+          <p class="price">${{ gig.price }}</p>
+        </div>
+        <div class="additional-info">
+          <div class="delivery-wrapper">
+            <div class="img-clock">
+              <img src="../assets/logo/clock.png" alt />
+              <p>{{ gig.daysToMake }} &nbsp;Days Delivery</p>
+            </div>
+          </div>
+          <div class="revision-wrapper">
+            <img src="../assets/logo/cycle.png" alt />
+            <p>{{ gig.daysToMake }} &nbsp;Revisions</p>
+          </div>
+        </div>
+        <div class="promises-section">
+          <div class="guarentee-section">
+            <div class="v-image">
+              <img
+                src="../assets/logo/icons8-done-48.png"
+                class="v-details"
+                alt=""
+              />
+            </div>
+            <p>High quality product guarenteed</p>
+          </div>
+          <div class="guarentee-section">
+            <div class="v-image">
+              <img
+                src="../assets/logo/icons8-done-48.png"
+                class="v-details"
+                alt=""
+              />
+            </div>
+            <p>Delivery on time guarentee</p>
+          </div>
+          <div class="guarentee-section">
+            <div class="v-image">
+              <img
+                src="../assets/logo/icons8-done-48.png"
+                class="v-details"
+                alt=""
+              />
+            </div>
+            <p>1 Product</p>
+          </div>
+        </div>
+        <div class="buy-btn">
+          <button @click="addOrder">Continue (${{ gigPrice }})</button>
+        </div>
+      </div>
+    </div>
+
       <div class="about-gig">
         <p class="about-title">About This Gig</p>
         <p class="about-text">{{ gig.about }}</p>

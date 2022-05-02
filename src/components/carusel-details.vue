@@ -11,10 +11,9 @@
           emit: false,
         })
       "
-      fixed-height="400px"
     >
       <vueper-slide v-for="(image, i) in images" :key="i" :image="image">
-        <img src="(image, i)" alt />
+        <img :src="(image, i)" alt />
       </vueper-slide>
     </vueper-slides>
 
@@ -40,7 +39,7 @@
           :image="image"
           @click.native="$refs.vueperslides2.goToSlide(i)"
         >
-          <img src="(image, i)" alt />
+          <img :src="(image, i)" alt />
         </vueper-slide>
       </vueper-slides>
     </div>
@@ -64,6 +63,14 @@ export default {
 <style>
 .carousel {
   width: 100%;
+}
+
+.vueperslides.vueperslide {
+  height: 400px;
+}
+
+.vueperslides__parallax-wrapper {
+  height: 400px;
 }
 
 .vueperslides__arrow svg {
@@ -118,5 +125,29 @@ export default {
 
 .vueperslides__arrow--prev {
   left: -30px;
+}
+
+@media screen and (max-width: 900px) {
+  .vueperslides.vueperslides {
+    height: auto;
+  }
+  .vueperslides__parallax-wrapper {
+    height: 300px;
+  }
+
+
+}
+
+@media screen and (max-width: 500px) {
+  .vueperslides.vueperslides {
+    height: auto;
+  }
+  .vueperslides__parallax-wrapper {
+    height: 200px;
+  }
+  .vueperslides__arrows svg {
+    max-width: 20px;
+  }
+
 }
 </style>
