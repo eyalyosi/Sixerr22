@@ -14,6 +14,7 @@
         <img src="../assets/img/linkedin.png" alt="linkedin icon" />
         <img src="../assets/img/pinterest.png" alt="pinterest icon" />
         <img src="../assets/img/instagram.png" alt="instagram icon" />
+        
       </div>
     </div>
   </footer>
