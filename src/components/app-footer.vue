@@ -9,21 +9,12 @@
         <p>© Sixerr International Ltd. 2022</p>
       </div>
       <div class="right-side">
-<<<<<<< HEAD
-        <img src="../assets/img/twiter.png" alt="twiter icon" />
-        <img src="../assets/img/facebook.png" alt="facebook icon" />
-        <img src="../assets/img/linkedin.png" alt="linkedin icon" />
-        <img src="../assets/img/pinterest.png" alt="pinterest icon" />
-        <img src="../assets/img/instagram.png" alt="instagram icon" />
-        
-=======
         <a href="https://twitter.com/"><img src="../assets/img/twiter.png" alt="twiter icon" /></a>
         <a href="https://www.facebook.com/"><img src="../assets/img/facebook.png" alt="facebook icon" /></a>
         <a href="https://www.linkedin.com/"> <img src="../assets/img/linkedin.png" alt="linkedin icon" /></a>
         <a href="https://www.pinterest.com/"><img src="../assets/img/pinterest.png" alt="pinterest icon" /></a>
         <a href="https://www.instagram.com/"> <img src="../assets/img/instagram.png" alt="instagram icon" /></a>
 
->>>>>>> 79e3392b0503a6ccd56f72c89d4a381003a1b438
       </div>
     </div>
   </footer>
