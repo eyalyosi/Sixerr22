@@ -201,7 +201,8 @@
   .become-seller,
   .signin,
   .join,
-  .sign-in {
+  .sign-in,
+  .search-section-header-new {
     display: none;
   }
 
@@ -253,11 +254,25 @@
 
 @media screen and (max-width: 600px) {
 
+
+  .main-layout {
+    width: 100%;
+  }
+
   .hero-section {
     background-color: #023A15;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
+    display: block;
+  }
+
+  .hero-container {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+
   }
 
   .search-section {
@@ -288,7 +303,8 @@
 
   .main-info-box {
     height: 100%;
-    padding: 75px;
+    // padding: 75px;
+    padding: 15px;
   }
 
   .content-box {
@@ -331,6 +347,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .search-section-header-new {
+    display: none;
+  }
 
   .show-category-title {
 
@@ -350,9 +369,9 @@
     font-size: 24px;
   }
 
-  .search-section {
-    display: none;
-  }
+  // .search-section {
+  //   display: none;
+  // }
 
   .logo-part {
     p {
@@ -376,6 +395,14 @@
     padding: 0;
   }
 
+  .hero-content {
+    margin-top: 48px;
+  }
+
+  .hero-container {
+    padding: 48px 0
+  }
+
   .main-info-box {
     font-size: 1.5em;
   }
@@ -388,5 +415,9 @@
     width: auto;
   }
 
+  .main-footer {
+    padding: 15px;
+    font-size: .7rem;
+  }
 
 }
