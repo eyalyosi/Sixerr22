@@ -65,7 +65,6 @@ export default {
     async imgUploaded(imgUrl) {
       const user = { ...this.loggedinUser, imgUrl };
       await this.$store.dispatch({ type: "save", user });
-      console.log("imgUploaded after");
     },
     approveOrder(orderId) {
       this.$store.dispatch({ type: "approveOrder", orderId });
