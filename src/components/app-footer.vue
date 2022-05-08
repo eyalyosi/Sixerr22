@@ -9,6 +9,8 @@
         <p>© Sixerr International Ltd. 2022</p>
       </div>
       <div class="right-side">
+
+
         <a href="https://twitter.com/"><img src="../assets/img/twiter.png" alt="twiter icon" /></a>
         <a href="https://www.facebook.com/"><img src="../assets/img/facebook.png" alt="facebook icon" /></a>
         <a href="https://www.linkedin.com/"> <img src="../assets/img/linkedin.png" alt="linkedin icon" /></a>

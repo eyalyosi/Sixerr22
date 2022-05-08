@@ -1,4 +1,8 @@
 @media screen and (max-width: 1300px) {
+  // .app-header {
+  //   // margin-left: 20px;
+  //   // margin-right: 10px;
+  // }
 
   .logo-and-search {
     margin-left: 20px;
@@ -10,57 +14,6 @@
   .avatar-box {
     margin-right: 25px;
   }
-  .gig-title-table{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 20ch;
-}
-.user-profile-info-card {
- min-width: 0px;
- max-width: 250px;
-}
-.user-from-member {
-  width: 200px;
-}
-
-
-}
-@media screen and (max-width: 900px) {
-
-  .main-grid {
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 16px;
-  }
-
-  .details-title-info h1 {
-    line-height: 130%;
-    font-size: 24px;
-  }
-
-.check-out-section-mobile {
-  display: block;
-}
-.check-out-section {
-  display: none;
-}
-
-.check-out-part {
-  display: contents;
-
-}
-
-.info-side {
-  margin: 0;
-}
-
-.gig-page {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-
-  .gig-title-table{
 
   .gig-title-table {
     overflow: hidden;
@@ -77,9 +30,64 @@
   .user-from-member {
     width: 200px;
   }
+
+
 }
 
 @media screen and (max-width: 900px) {
+
+
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  .details-title-info h1 {
+    line-height: 130%;
+    font-size: 24px;
+  }
+
+  .check-out-section-mobile {
+    display: block;
+  }
+
+  .check-out-section {
+    display: none;
+  }
+
+  .check-out-part {
+    display: contents;
+
+  }
+
+  .info-side {
+    margin: 0;
+  }
+
+  .gig-page {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+
+  .gig-title-table {
+    .gig-title-table {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 20ch;
+    }
+
+    .user-profile-info-card {
+      min-width: 0px;
+      max-width: 250px;
+    }
+
+    .user-from-member {
+      width: 200px;
+    }
+  }
+
   .gig-title-table {
     overflow: hidden;
     white-space: nowrap;
@@ -140,6 +148,8 @@
     justify-content: center;
   }
 
+
+
   .hero-content {
     margin-top: 100px;
     position: static;
@@ -147,6 +157,8 @@
 
   .search-section {
     display: flex;
+
+
   }
 
   .hero-box {
@@ -176,13 +188,15 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 6% 6%;
+    // padding: 6% 6%;
+    height: 100%;
   }
 
   .category-title,
   .hero-img,
   .seller-star-name-box,
   .popular-categories,
+  .categories-container,
   .explore,
   .become-seller,
   .signin,
@@ -201,24 +215,104 @@
     top: 22%;
     margin-left: 7px;
   }
+
   .save-review-btn button {
     width: auto;
   }
+
   .main-grid {
     justify-content: center;
   }
+
   .category-title-page {
-    font-size: 24px;  
+    font-size: 24px;
     color: #62646a;
   }
+
   .show-category-title .category-title-page {
     font-size: 32px;
     color: #222325;
     padding-bottom: 0;
-}
-  
+  }
+
+
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background-color: #f1fdf7;
+    // padding: 4em 0;
+
+  }
+
+
 
 }
+
+@media screen and (max-width: 600px) {
+
+  .hero-section {
+    background-color: #023A15;
+    height: 100%;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input {
+      border: none;
+      font-size: 1em;
+      margin: 0;
+      width: 100%;
+      padding: 13.5px;
+      padding-left: 44px;
+      flex: 0 0 auto;
+      font-family: "macan-light";
+      height: 46px;
+      max-width: 100%;
+
+    }
+
+    button {
+      width: 100%;
+
+    }
+  }
+
+
+  .main-info-box {
+    height: 100%;
+    padding: 75px;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background-color: #f1fdf7;
+    padding: 0;
+  }
+
+  .main-footer {
+    border-top: 1px solid #E4E5E7;
+    display: flex;
+    margin: 0;
+    outline: 0;
+    height: 87px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+
+
 @media screen and (max-width: 709px) {
   .main-grid {
     grid-template-columns: repeat(auto-fill, minmax(100%, 310px));
@@ -241,7 +335,7 @@
   .show-category-title {
 
     h1 {
-      font-size: 24px;  
+      font-size: 24px;
       color: #003bec;
 
     }
@@ -255,6 +349,7 @@
     line-height: 130%;
     font-size: 24px;
   }
+
   .search-section {
     display: none;
   }
@@ -287,14 +382,11 @@
 
   .gig-page {
     padding: 32px 10px 10px;
-    }
+  }
 
   .save-review-btn button {
     width: auto;
   }
-}
-
-
 
 
 }
