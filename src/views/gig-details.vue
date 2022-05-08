@@ -278,7 +278,6 @@ export default {
   async created() {
     var { _id } = this.$route.params;
     await gigService.getById(_id).then((gig) => {
-      // console.log("gig from details", gig);
       this.gig = gig;
       this.images = gig.image;
       this.rates = gig.owner.rate;
@@ -287,18 +286,13 @@ export default {
       this.orderToAdd.gig.name = gig.category;
       this.orderToAdd.gig.price = gig.price;
       this.orderToAdd.seller = gig.owner;
-      // this.$store.dispatch({type:'setUser', userId: '624440b1f11c47915c617278'}).then(() => {
-      // this.orderToAdd.buyer = this.getMiniUser
-      // })
       const userId = this.gig.owner._id;
       userService.getById(userId).then((user) => {
         this.currUser = user;
-        // console.log(this.currUser);
       });
     });
     const userId = this.$store.getters.loggedinUser._id;
     const user = await userService.getById(userId);
-    // console.log(user);
     this.user = user;
     this.reviewToAdd = reviewService.getEmptyReview();
     var { _id, fullname, imgUrl, flag } = user;
@@ -348,11 +342,8 @@ export default {
   },
   methods: {
     async addOrder() {
-      // TODO- add order with all details
-      // console.log(this.gig);
-      // console.log(this.currUser);
+
       this.orderToAdd = orderService.getEmptyOrder();
-      //TODO - order id??
       this.orderToAdd.buyer._id = this.loggedInUser._id;
       this.orderToAdd.buyer.name = this.loggedInUser.fullname;
       this.orderToAdd.seller._id = this.gig.owner._id;
@@ -361,15 +352,8 @@ export default {
       this.orderToAdd.gig.name = this.gig.category;
       this.orderToAdd.gig.price = this.gig.price;
       this.orderToAdd.gig.title = this.gig.title
-      console.log(this.orderToAdd);
       this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
       this.$router.push("/user-profile");
-      // try {
-      //   await this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
-      //   this.$router.push("/user-profile");
-      // } catch (err) {
-      //   console.log("err", err);
-      // }
     },
     async addReview() {
       const addedReview = await this.$store.dispatch({

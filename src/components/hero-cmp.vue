@@ -150,7 +150,6 @@ export default {
       }, 5000);
     },
     setFilter(filterBy) {
-      // console.log("filterBy:", filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
       this.$router.push("/explore");
     },

@@ -30,7 +30,6 @@ export default {
   data() {
     return {
       loginCred: { username: "", password: "" },
-      // loggedinUser: userService.getLoggedinUser(),
     };
   },
   methods: {

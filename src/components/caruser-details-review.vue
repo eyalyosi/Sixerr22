@@ -38,7 +38,6 @@ export default {
     };
   },
    created() {
-    // console.log(this.user);
   },
   methods: {
     appendSlide() {
@@ -60,17 +59,7 @@ export default {
     },
   },
   computed: {
-    // getReviews() {
-    //     this.user.reviews.map((review) => {
-    //         console.log(review);
-    //     })
-    // }
-    // getImg() {
-    //     this.user.reviews.forEach((review) => {
-    //         console.log(review.by.imgUrl);
-    //         return review.by.imgUrl
-    //     })
-    // }
+
   },
   components: {
     VueperSlides,
@@ -113,9 +102,6 @@ export default {
   border-radius: 4px px;
 }
 
-.vueperslide {
-  /* background-size: 30px; */
-}
 
 .vueperslides__arrow.vueperslides__arrow--next {
   opacity: inherit;

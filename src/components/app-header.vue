@@ -93,13 +93,11 @@ export default {
       this.showProfileNav = false;
     },
     setFilter(filterBy) {
-      // console.log("filterBy:", filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
       this.$router.push("/explore");
     },
     showAllCategories() {
       this.setFilter("");
-      // console.log("route:", this.$route);
       if (this.$route.path === "/explore") return;
       this.$router.push("/explore");
     },
