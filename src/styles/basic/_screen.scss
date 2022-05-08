@@ -259,6 +259,10 @@
     width: 100%;
   }
 
+  .header-flex {
+    justify-content: center;
+  }
+
   .hero-section {
     background-color: #023A15;
     height: 100%;
@@ -297,6 +301,16 @@
     button {
       width: 100%;
 
+    }
+  }
+
+  .logo-and-search {
+    margin: 0;
+  }
+
+  .logo-part {
+    p {
+      padding: 0;
     }
   }
 
