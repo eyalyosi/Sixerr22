@@ -17,7 +17,6 @@
         <a href="https://www.pinterest.com/"><img src="../assets/img/pinterest.png" alt="pinterest icon" /></a>
         <a href="https://www.instagram.com/"> <img src="../assets/img/instagram.png" alt="instagram icon" /></a>
 
-
       </div>
     </div>
   </footer>
