@@ -102,9 +102,6 @@ export default {
   border-radius: 4px px;
 }
 
-.vueperslide {
-  /* background-size: 30px; */
-}
 
 .vueperslides__arrow.vueperslides__arrow--next {
   opacity: inherit;
