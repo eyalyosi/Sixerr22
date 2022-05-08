@@ -77,13 +77,11 @@ export default {
   },
   actions: {
     getById({ state }, { _id }) {
-      // console.log('_id', _id);
       return state.gigs.find(gig => gig._id === _id)
     },
     async loadGigs({ commit, state }) {
       try {
         const gigs = await gigService.query(state.filterBy)
-        // console.log('Gigs from loadGigs');
         commit({ type: 'setGigs', gigs })
       } catch {
         console.log('error');

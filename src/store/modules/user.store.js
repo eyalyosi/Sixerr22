@@ -48,7 +48,6 @@ export default {
         },
         async save({ commit }, { user }) {
             const savedUser = await userService.save(user)
-            // console.log(savedUser);
             commit({ type: 'setLoggedinUser', user: savedUser })
         },
         async fetchLoggedinUser({ commit, dispatch }) {
@@ -58,11 +57,9 @@ export default {
             socketService.emit('watch user', user._id)
             socketService.off('order update')
             socketService.on('order update', (order) => {
-                // console.log('order update', order)
                 commit({ type: 'saveOrder', order })
             })
             socketService.on('user msg', (msg) => {
-                // console.log('user msg', msg)
                 dispatch({ type: 'setUserMsg', msg })
             })
         },
@@ -72,11 +69,9 @@ export default {
             socketService.emit('watch user', user._id)
             socketService.off('order update')
             socketService.on('order update', (order) => {
-                // console.log('order update', order)
                 commit({ type: 'saveOrder', order })
             })
             socketService.on('user msg', (msg) => {
-                // console.log('user msg', msg)
                 dispatch({ type: 'setUserMsg', msg })
             })
         },
@@ -93,7 +88,6 @@ export default {
         async loadUsers({ commit, state }) {
             try {
                 const users = await userService.query()
-                // console.log('users:', users);
                 commit({ type: 'setUsers', users })
             } catch {
                 console.log('error');

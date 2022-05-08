@@ -29,7 +29,6 @@ export default defineComponent({
   props: {
     categories: {
       type: Array,
-      //   required: true,
     },
   },
   computed: {
@@ -39,9 +38,7 @@ export default defineComponent({
   },
   methods: {
     explore(filter) {
-      // console.log(filter);
       this.$emit("explore", filter);
-      // this.$router.push("/explore");
       this.$router.push(`/explore/${filter}`);
     },
   },

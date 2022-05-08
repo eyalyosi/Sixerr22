@@ -85,7 +85,6 @@ export default {
       const delivery = this.filterBy.delivery;
       const level = this.filterBy.level;
       const filterBy = { category,delivery, level };
-      console.log("filterby", filterBy);
       this.$emit("setFilter", { ...filterBy });
     },
   },

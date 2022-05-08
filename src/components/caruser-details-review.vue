@@ -60,17 +60,7 @@ export default {
     },
   },
   computed: {
-    // getReviews() {
-    //     this.user.reviews.map((review) => {
-    //         console.log(review);
-    //     })
-    // }
-    // getImg() {
-    //     this.user.reviews.forEach((review) => {
-    //         console.log(review.by.imgUrl);
-    //         return review.by.imgUrl
-    //     })
-    // }
+
   },
   components: {
     VueperSlides,

@@ -17,15 +17,11 @@ export default {
         },
         saveOrder(state, { order }) {
             const idx = state.orders.findIndex((currOrder) => currOrder._id === order._id)
-            // console.log('save order inx', idx);
             if (idx !== -1) {
-                // console.log('splice');
                 state.orders.splice(idx, 1, order)
             } else {
-                // console.log('push');
                 state.orders.push(order)
             }
-            console.log(state.orders);
         },
         removeOrder(state, { orderId }) {
             state.orders = state.orders.filter(order => order._id !== orderId)
@@ -34,9 +30,7 @@ export default {
     actions: {
         async addOrder({ state, commit }, { order }) {
             try {
-                // console.log(order);
                 const savedOrder = await orderService.save(order)
-                // console.log('savedOrder', savedOrder);
                 if (-1 === state.orders.findIndex((currOrder) =>
                     currOrder._id === savedOrder._id))
                     { socketService.emit('new order', savedOrder) }
@@ -61,7 +55,6 @@ export default {
             try {
                 const { orders } = state
                 const idx = orders.findIndex(order => order._id === orderId)
-                // console.log('approved order idx', idx);
                 if (idx !== -1) {
                     const updatedOrder = JSON.parse(JSON.stringify(orders[idx]))
                     updatedOrder.status = updatedOrder.status === 'approved' ? 'pending' : 'approved'
